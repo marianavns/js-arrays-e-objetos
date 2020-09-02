@@ -89,6 +89,7 @@ const trueSingers = ['Knowles', 'Houston', 'Keys', 'Spears']
 console.log(trueSingers) // terminal: ['Knowles', 'Houston', 'Keys', 'Spears']
 console.log(`Retiramos a ${trueSingers.pop()} da lista de cantoras`)
 console.log(trueSingers) // terminal: ['Knowles', 'Houston', 'Keys']
+```
 
 ## Observações gerais para colar num post-it <h2>
 *Saiba o que tem guardado dentro de cada variável.*

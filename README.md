@@ -2,7 +2,7 @@
 # Reprograma Semana 4 - Arrays <h1>
 
 ## Arrays <h2>
-O primeiro índice da array é o índice 0. Array é um arranjo, uma matriz. Os arrays do JavaScript aceitam dados mistos dentro dela.
+Array é um arranjo, uma matriz. As arrays do JavaScript aceitam dados mistos. O primeiro índice da array é o índice 0.
 
 ### Fazendo verificações via arrays <h3>
 ```js

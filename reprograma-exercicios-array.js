@@ -6,28 +6,28 @@
 // índice 1, elemento "gatinho"
 // índice 2, elemento "brócolis"
 
-const frutas = ["uva", "manga", "pitomba"]
+// const frutas = ["uva", "manga", "pitomba"]
 
-function indicaDetalhes(arr){
-        for(i = 0; i < arr.length; i++){
-        console.log(`Índice: ${i}, Elemento: ${arr[i]}`)
-        }
-}
-indicaDetalhes(frutas)
+// function indicaDetalhes(arr){
+//         for(i = 0; i < arr.length; i++){
+//         console.log(`Índice: ${i}, Elemento: ${arr[i]}`)
+//         }
+// }
+// indicaDetalhes(frutas)
 
 
 
 // 2) Crie uma função que receba uma array de números inteiros e retorne a soma dos elementos.
 // Exemplo: recebendo [10,11,12] deve retornar 33
 
-function soma(arr){
-    let total = 0
-    for(i = 0; i < arr.length; i++){
-        total += arr[i]
-        }
-        return total
-}
-console.log(`A soma dos números é ${soma([1, 10, 200])}`)
+// function soma(arr){
+//     let total = 0
+//     for(i = 0; i < arr.length; i++){
+//         total += arr[i]
+//         }
+//         return total
+// }
+// console.log(`A soma dos números é ${soma([1, 10, 200])}`)
 
             // O que aconteceu aqui? A função usou o índice para encontrar os numeros para somar.
             // Entrou na função com o índice 0 e atribuiu ao "total" o número 1. 
@@ -43,24 +43,40 @@ console.log(`A soma dos números é ${soma([1, 10, 200])}`)
 // 3) Crie uma função que receba uma array de números inteiros e retorne outra array somente com os elementos maiores que 5.
 // Exemplo, recebendo [88,55,0,2,85,81,24,12] deve retornar [ 88, 55, 85, 81, 24, 12 ]
 
-let arrayUsuario = [1, 2, 50, 100, 34, 12, 5]
+// let arrayUsuario = [1, 2, 50, 100, 34, 12, 5]
 
-function verifica(arr){
-let arrayFinal = []
-        for (i = 0; i < arr.length; i++){           
-            if (arr[i] > 5){
-                arrayFinal.push(arr[i])
-            }
-        }
-return arrayFinal
-}
+// function verifica(arr){
+// let arrayFinal = []
+//         for (i = 0; i < arr.length; i++){           
+//             if (arr[i] > 5){
+//                 arrayFinal.push(arr[i])
+//             }
+//         }
+// return arrayFinal
+// }
 
-console.log(verifica(arrayUsuario))
+// console.log(verifica(arrayUsuario))
 
 
 
 // 4) Modifique a função anterior para que receba, além da array, o número para comparação (não deixar mais fixo como número 5).
 // Exemplo, recebendo ([88,55,0,2,85,81,24,12], 20) deve retornar [ 88, 55, 85, 81, 24 ]
+
+let arrayUser = [23, 30, 48, 513, 82, 0, 6, 25, 2020]
+const parameterUser = 40
+
+function verificaParametro (arr, par){
+let arrayFinal = []
+        for (i = 0; i < arr.length; i++){
+                if(arr[i] > par){
+                    arrayFinal.push(arr[i])
+                }
+        }
+return arrayFinal
+}
+console.log(verificaParametro(arrayUser, parameterUser))
+
+
 
 
 // 5) Crie uma função que receba uma array de números inteiros e retorne o maior número encontrado.

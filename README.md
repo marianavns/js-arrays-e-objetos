@@ -72,7 +72,7 @@ console.log(coresPreferidas.indexOf(branco)) // terminal: 3
 console.log(coresPreferidas.indexOf(verde)) // terminal: -1
 ```
 
-### arr.push(oQueVocêQuerIncluir) <h3>
+### arr.push(oQueEuQueroIncluir) <h3>
 Aqui é possível "empurrar" mais um participante para a array, sendo ele o último.
 ```js
 const femaleRappers = ['Elliot', 'Hill', 'Minaj']
@@ -96,3 +96,51 @@ console.log(trueSingers) // terminal: ['Knowles', 'Houston', 'Keys']
 *Uma comparação sempre retorna "true" ou "false":*
 *Saiba o que tem guardado dentro de cada variável*
 console.log(`índice: ${i} - tarefa:  ${arr[i]}`)
+
+# Reprograma Semana 4 - Objetos <h1>
+
+## Estrutura Básica de Objeto <h2>
+Os objetos são, tenta lembrar assim, como grandes matrizes. Essa é a estrutura básica dos objetos:
+```js
+const pessoa1 = {
+    fname: 'Mariana', // conjunto chave-valor
+    age: '29',
+    lname: 'Souza',
+    cities: ['Recife', 'Jaboatao', 'Sao Paulo'],
+}
+```
+## Manipulando as informações dentro dos objetos <h2>
+Para imprimir, puxar, informações de um objeto, podemos fazer isso de duas formas. Afinal, esse é o objetivo do objeto: permitir que as informações sejam guardadas, acessadas e disponibilizadas.
+
+### Puxando as Informações do Objeto <h3>
+
+#### Notação de Ponto <h4>
+sintaxe: **nomeDoObjeto**.*aChaveQueVocêQuer*
+```js
+console.log(`O nome da pessoa no objeto é ${pessoa1.fname}`)
+```
+
+#### Notação de Colchetes <h4>
+sintaxe: **nomeDoObjeto***['aChaveQueVocêQuer']['indiceDoQueVocêQuer']*
+
+Esse caso é melhor que o de cima, pois permite variáveis! Isso pode trazer muitas variações!
+```js
+                                            //nome do objeto['aChaveQueVocêQuer']['indiceDoQueVocêQuer']
+console.log(`Uma das cidades que a ${pessoa1['fname']} esteve é ${pessoa1['cities'][2]}`)
+```
+
+### Empurrando informações no Objeto <h3>
+
+É bem parecido com empurrar na array, só que um pouquinho mais simples!
+```js
+const pessoa2 = {}
+console.log(pessoa2) // terminal: {}
+pessoa2['name'] = "Leonardo"
+pessoa2['age'] = 35
+pessoa2['lname'] = "Vieira"
+console.log(pessoa2) // terminal: { name: 'Leonardo', age: 35, lname: 'Vieira' }
+```
+Ou seja, as chaves são uma grande tela em branco em que podemos colocar qualquer informação, desde que sigamos a sintaxe certa, que é *nomeDoObjeto['chave']=valor*: a **chave nome** que o objeto pessoa2 recebeu foi o **valor Leonardo**. 
+
+
+

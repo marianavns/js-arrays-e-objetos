@@ -38,3 +38,20 @@
 // console.log(coresPreferidas.indexOf('azul')) // terminal: 1
 // console.log(coresPreferidas.indexOf('branco')) // terminal: 3
 // console.log(coresPreferidas.indexOf('verde')) // terminal: -1
+
+// const pessoa1 = {
+//     fname: 'Mariana', // conjunto chave-valor
+//     age: '29',
+//     lname: 'Souza',
+//     cities: ['Recife', 'Jaboatao', 'Sao Paulo'],
+// }
+
+// console.log(`O nome da pessoa no objeto é ${pessoa1.fname}`)
+// console.log(`Uma das cidades que a ${pessoa1['fname'][0]} esteve é ${pessoa1['cities'][2]}`)
+
+// const pessoa2 = {}
+// console.log(pessoa2) // terminal: {}
+// pessoa2['name'] = "Leonardo"
+// pessoa2['age'] = 35
+// pessoa2['lname'] = "Vieira"
+// console.log(pessoa2) // terminal: {}

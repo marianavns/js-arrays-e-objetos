@@ -55,3 +55,82 @@
 // pessoa2['age'] = 35
 // pessoa2['lname'] = "Vieira"
 // console.log(pessoa2) // terminal: {}
+
+
+// function criaObjeto(nome, idade){
+//     let objeto = {
+//         nome,
+//         idade,
+//     }
+// return objeto
+// }
+
+// console.log(criaObjeto("Mariana", 29))
+
+// const nome = "mariana"
+// console.log(nome[2]) // terminal: "r"
+
+// femaleRappers = ["Beyonce", "Minaj"]
+// console.log(femaleRappers)
+// femaleRappers[2] = "Elliot"
+// console.log(femaleRappers)
+
+// function imprimeObjeto (){
+//         const objeto = {
+//             nome: 'Mariana',
+//             sobrenome: 'Vieira',
+//             contatos: {
+//                 pessoa1: "Iasmin",
+//                 pessoa2: "Leonardo",
+//                 }
+//         }
+//     return objeto
+// }
+
+// console.log(imprimeObjeto())
+
+// imprimeObjeto()
+
+// function imprimeArray (){
+//     let array = ['Mariana', 'Iasmin', 'Leonardo']
+//     return array
+// }
+
+// console.log(imprimeArray())
+
+
+// console.log(arrayBase)
+// let arrayNova = arrayBase.map(i => 2*i)
+// console.log(arrayNova)
+
+// let arrayBase = [1, 10, 100]
+// console.log(arrayBase) // terminal: [ 1, 10, 200 ]
+// let arrayNova = arrayBase.map(i => 2*i)
+// console.log(arrayNova) // terminal: [ 2, 20, 200 ]
+
+// let arrayBase = [1, 10, 100]
+// let arrayNova = []
+// for (i = 0; i < arrayBase.length; i++){
+//     arrayNova.push(arrayBase[i]*20)
+// }
+// console.log(arrayNova)
+
+// let arrayBase = [1, 10, 100] // terminal: [ 1, 10, 200 ]
+// let arrayNova = arrayBase.map(parametro => 2*parametro)
+// console.log(arrayNova)
+
+// const objeto = [{
+//     nome: 'Mariana',
+//     sobrenome: 'Vieira',
+//     contatos: {
+//         pessoa1: "Iasmin",
+//         pessoa2: "Leonardo",
+//     }
+// }]
+
+// const nomePessoa2 = objeto.map(objeto => objeto.contatos[0] )
+// console.log(nomePessoa2)
+
+
+    
+     

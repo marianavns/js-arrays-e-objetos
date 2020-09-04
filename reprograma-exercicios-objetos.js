@@ -10,6 +10,18 @@
 //   autoria: 'Lygia Fagundes Telles'
 // }
 
+function criaObjeto(title, pages, author) {
+      let objLivro = {
+        titulo: title,
+        paginas: pages,
+        autoria: author
+      }
+return objLivro
+}
+
+console.log(criaObjeto('As Aventuras de Huckleberry Finn', 366, 'Mark Twain'))
+
+
   // 2) Aproveite a função acima em outra função, que deve retornar a seguinte frase: "O livro XXXX foi escrito por XXX e tem XXX páginas". Você deve utilizar a função que já está pronta, e não reescrever a lógica dela dentro dessa nova função.
   
   // 3) Crie uma função que receba um objeto como o abaixo:

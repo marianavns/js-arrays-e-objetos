@@ -1,8 +1,20 @@
 
-# Reprograma Semana 4 - Arrays <h1>
+# Reprograma Semana 4 - Arrays e Objetos
 
-## Arrays <h2>
-Array é um arranjo, uma matriz. As arrays do JavaScript aceitam dados mistos. O primeiro índice da array é o índice 0.
+## Como cada um parece
+
+![arrayeobjeto](https://i.ibb.co/PhjNBjv/reprograma-s4-array-e-objeto.png)
+
+
+
+# Arrays <h1>
+
+## Introdução <h2>
+Array é um arranjo, uma matriz. As arrays do JavaScript aceitam dados mistos, dá pra colocar dados de diferentes tipos lá - números, strings, conjuntos chave-valor... E lembre-se: o primeiro índice da array é sempre 0.
+```js
+let arrayExemplo = ["mariana", 29, ["recife", "jaboatao", "sao paulo"], {curso: "backend", instituicao: "reprograma"
+}]
+```
 
 ### Fazendo verificações via arrays <h3>
 ```js
@@ -16,7 +28,11 @@ console.log(cpf[0] === 072) // true, pois agora sim você está comparando dois 
 const cpf = [072, 200, 684, 5, 0]
 console.log(cpf[3]) // "índice 3 do CPF" ou "CPF índice 3"
 //resultado no terminal: 684
+
+const nome = "mariana"
+console.log(nome[2]) // terminal: "r" - String é uma array de caracteres!
 ```
+
 Outra forma é fazendo uma operação matemática dentro dos colchetes:
 ```js
 const cpf = [072, 200, 684, 5, 0]
@@ -40,6 +56,7 @@ novaArray[2] = true
 
 console.log(novaArray)
 ```
+É possível adicionar item numa array vazia, mas também numa array já existente. É só ATRIBUIR VALOR ÀQUELE ÍNDICE: nomeDaArray[indice] = valorASerIncluido. Se você usar um índice que já está preenchido na array, *ele será substituído*.
 
 ## Array junto com o for <h2>
 É possível imprimir na tela todos os itens da array em linhas separadas, índice por índice, com a ajuda do for:
@@ -61,6 +78,11 @@ Há formas já preparadas para fazer algumas coisas nas arrays, como empurrar fa
 
 Site com todos os métodos: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
 
+**Atenção aqui:**
+para agregar e retirar elementos: *push, pop, shift, unshift, slice, splice e concat.*
+para buscar elementos dentro da array: *indexOf, lastIndexOf, includes, find, findIndex e filter.*
+para transformar arrays: map, reduce, *sort, reverse, split e join.*
+
 Abaixo, três deles:
 
 ### arr.indexOf(oQueEstouProcurando) <h3>
@@ -81,6 +103,7 @@ console.log(femaleRappers) // terminal: ['Elliot', 'Hill', 'Minaj']
 femaleRappers.push('Thee Stalion')
 console.log(femaleRappers) // terminal: ['Elliot', 'Hill', 'Minaj', 'Thee Stalion']
 ```
+Outra forma de fazer isso, como já foi visto, é apenas escrever femaleRappers[3]='Thee Stalion' e ela será incluída por último na array. Mas, para isso, seria necessário já saber o tamanho da array para incluir na última posição e não correr o risco de substituir quem já estava dentro.
 
 ### arr.pop() <h3>
 Arranca o último item de uma array.
@@ -142,5 +165,36 @@ console.log(pessoa2) // terminal: { name: 'Leonardo', age: 35, lname: 'Vieira' }
 ```
 Ou seja, as chaves são uma grande tela em branco em que podemos colocar qualquer informação, desde que sigamos a sintaxe certa, que é *nomeDoObjeto['chave']=valor*: a **chave nome** que o objeto pessoa2 recebeu foi o **valor Leonardo**. 
 
+## Criando um objeto via função
+sintaxe: 
+*função (parametros) {*
+    *let nomeObjeto = {*
+        *primeiroQueAparece: parametro1*
+        *segundoQueAparece: parametro2*
+    }
+*return nomeDoObjeto*
+*}*
 
+```js
+function criaObjeto(title, pages) {
+      let objLivro = {
+        titulo: title,
+        paginas: pages,
+        }
+return objLivro
+}
+console.log(criaObjeto('Antes do Baile Verde', 234, 'Lygia'))
+```
 
+Ou se os nomes que aparecem também são os nomes dos parametros:
+
+```js
+function criaObjeto(nome, idade){
+    let objeto = {
+        nome,
+        idade,
+    }
+return objeto
+}
+console.log(criaObjeto("Mariana", 29))
+```

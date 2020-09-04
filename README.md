@@ -3,7 +3,7 @@
 
 ## Como cada um parece
 
-![arrayeobjeto](https://i.ibb.co/PhjNBjv/reprograma-s4-array-e-objeto.png)
+![arrayeobjeto](https://i.ibb.co/p4VVmCQ/reprograma-s4-array-e-objeto.png)
 
 
 

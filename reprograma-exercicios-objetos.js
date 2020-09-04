@@ -18,12 +18,24 @@ function criaObjeto(title, pages, author) {
       }
 return objLivro
 }
-
 console.log(criaObjeto('As Aventuras de Huckleberry Finn', 366, 'Mark Twain'))
 
 
-  // 2) Aproveite a função acima em outra função, que deve retornar a seguinte frase: "O livro XXXX foi escrito por XXX e tem XXX páginas". Você deve utilizar a função que já está pronta, e não reescrever a lógica dela dentro dessa nova função.
-  
+  // 2) Aproveite a função acima em outra função, que deve retornar a seguinte frase: 
+  // "O livro XXXX foi escrito por XXX e tem XXX páginas". 
+  // Você deve utilizar a função que já está pronta, e não reescrever a lógica dela dentro dessa nova função.
+
+    function imprimeObjeto(title, pages, author) {
+            let objLivro = {
+              titulo: title,
+              paginas: pages,
+              autoria: author
+            }
+    return console.log(`O livro ${objLivro.titulo} foi escrito por ${objLivro.autoria} e tem ${objLivro.paginas} páginas.`)
+    }
+    imprimeObjeto('As Aventuras de Huckleberry Finn', 366, 'Mark Twain')
+
+ 
   // 3) Crie uma função que receba um objeto como o abaixo:
   
   // const pessoa = {
@@ -39,6 +51,17 @@ console.log(criaObjeto('As Aventuras de Huckleberry Finn', 366, 'Mark Twain'))
   //   sobrenome: 'Tedesco',
   //   nomeCompleto: 'Nazaré Tedesco'
   // }
+
+  function transformaObjeto (name, lname){
+    let objPessoa = {
+      nome: 'name',
+      sobrenome: 'lname',
+    }
+    let fullName = `${objPessoa.nome} ${objPessoa.sobrenome}`
+    return `${objPessoa.nome}, ${objPessoa.sobrenome}, fullName`
+  }
+
+  console.log(transformaObjeto("Nazaré", "Tedesco"))
   
   // 4) Crie uma função que receba o objeto abaixo e o nome de uma das chaves, e retorne a soma de todos os elementos do array que for selecionado através da chave.
   

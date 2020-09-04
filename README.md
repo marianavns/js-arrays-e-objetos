@@ -1,7 +1,7 @@
 
 # Reprograma Semana 4 - Arrays e Objetos <h1>
 
-## Como cada um parece
+## Como cada um se parece
 
 ![arrayeobjeto](https://i.ibb.co/p4VVmCQ/reprograma-s4-array-e-objeto.png)
 

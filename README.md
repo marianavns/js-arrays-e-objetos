@@ -1,15 +1,18 @@
 
-# Reprograma Semana 4 - Arrays e Objetos
+# Reprograma Semana 4 - Arrays e Objetos <h1>
 
 ## Como cada um parece
 
 ![arrayeobjeto](https://i.ibb.co/p4VVmCQ/reprograma-s4-array-e-objeto.png)
 
+Arrays armazenam listas. Objetos armazenam elementos simples, mas com várias características.
+[Arrays usam chaves]. {Objetos usam colchetes}.
+
 
 
 # Arrays <h1>
 
-## Introdução <h2>
+## Primeiros Passos com Arrays <h2>
 Array é um arranjo, uma matriz. As arrays do JavaScript aceitam dados mistos, dá pra colocar dados de diferentes tipos lá - números, strings, conjuntos chave-valor... E lembre-se: o primeiro índice da array é sempre 0.
 ```js
 let arrayExemplo = ["mariana", 29, ["recife", "jaboatao", "sao paulo"], {curso: "backend", instituicao: "reprograma"
@@ -22,7 +25,6 @@ const cpf = [072, 200, 684, 5, 0]
 console.log(cpf[0] === "072") //false, pois você tá comparando um número com uma string.
 console.log(cpf[0] === 072) // true, pois agora sim você está comparando dois números.
 ```
-
 ### Como "puxar" apenas um item da array? <h3>
 ```js
 const cpf = [072, 200, 684, 5, 0]
@@ -39,13 +41,13 @@ const cpf = [072, 200, 684, 5, 0]
 console.log(cpf[90-88]) 
 //resultado no terminal: 684
 ```
-
 ### Para saber quantos elementos têm na Array <h3>
 ```js
 const cpf = [072, 200, 684, 5, 0]
 console.log(cpf.length)
 //resultado no terminal: 5
 ```
+
 
 ## Como construir uma Array <h2>
 ```js
@@ -74,6 +76,7 @@ console.log(novaArray)
 ```
 
 ## Métodos de Array <h2>
+### Introdução <h3>
 Há formas já preparadas para fazer algumas coisas nas arrays, como empurrar fatores para dentro, tirar fatores e imprimir em tela, e muitos outros. Usamos assim: **"nomeDaArray.metodo"**.
 
 Site com todos os métodos: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
@@ -84,7 +87,6 @@ para buscar elementos dentro da array: *indexOf, lastIndexOf, includes, find, fi
 para transformar arrays: map, reduce, *sort, reverse, split e join.*
 
 Abaixo, três deles:
-
 ### arr.indexOf(oQueEstouProcurando) <h3>
 Retorna qual o índice do que estou procurando. Se não estiver na array, aparece -1.
 ```js
@@ -93,7 +95,6 @@ console.log(coresPreferidas.indexOf(azul)) // terminal: 1
 console.log(coresPreferidas.indexOf(branco)) // terminal: 3
 console.log(coresPreferidas.indexOf(verde)) // terminal: -1
 ```
-
 ### arr.push(oQueEuQueroIncluir) <h3>
 Aqui é possível "empurrar" mais um participante para a array, sendo ele o último.
 ```js
@@ -104,7 +105,6 @@ femaleRappers.push('Thee Stalion')
 console.log(femaleRappers) // terminal: ['Elliot', 'Hill', 'Minaj', 'Thee Stalion']
 ```
 Outra forma de fazer isso, como já foi visto, é apenas escrever femaleRappers[3]='Thee Stalion' e ela será incluída por último na array. Mas, para isso, seria necessário já saber o tamanho da array para incluir na última posição e não correr o risco de substituir quem já estava dentro.
-
 ### arr.pop() <h3>
 Arranca o último item de uma array.
 ```js
@@ -114,13 +114,10 @@ console.log(`Retiramos a ${trueSingers.pop()} da lista de cantoras`)
 console.log(trueSingers) // terminal: ['Knowles', 'Houston', 'Keys']
 ```
 
-## Observações gerais para colar num post-it <h2>
-*Saiba o que tem guardado dentro de cada variável.*
-*Uma comparação sempre retorna "true" ou "false":*
-*Saiba o que tem guardado dentro de cada variável*
-console.log(`índice: ${i} - tarefa:  ${arr[i]}`)
 
-# Reprograma Semana 4 - Objetos <h1>
+
+
+# Objetos <h1>
 
 ## Estrutura Básica de Objeto <h2>
 Os objetos são, tenta lembrar assim, como grandes matrizes. Essa é a estrutura básica dos objetos:
@@ -132,17 +129,18 @@ const pessoa1 = {
     cities: ['Recife', 'Jaboatao', 'Sao Paulo'],
 }
 ```
+
 ## Manipulando as informações dentro dos objetos <h2>
-Para imprimir, puxar, informações de um objeto, podemos fazer isso de duas formas. Afinal, esse é o objetivo do objeto: permitir que as informações sejam guardadas, acessadas e disponibilizadas.
+### Introdução <h3>
+Para localizar informações de um objeto, podemos fazer isso de duas formas. Afinal, essa é a função dos objetos: permitir que as informações sejam guardadas, acessadas e disponibilizadas.
 
+Lembra que em array usamos o índice para achar algo? Em objetos, usamos uma string chamada *chave*.
 ### Puxando as Informações do Objeto <h3>
-
 #### Notação de Ponto <h4>
 sintaxe: **nomeDoObjeto**.*aChaveQueVocêQuer*
 ```js
 console.log(`O nome da pessoa no objeto é ${pessoa1.fname}`)
 ```
-
 #### Notação de Colchetes <h4>
 sintaxe: **nomeDoObjeto***['aChaveQueVocêQuer']['indiceDoQueVocêQuer']*
 
@@ -151,7 +149,6 @@ Esse caso é melhor que o de cima, pois permite variáveis! Isso pode trazer mui
                                             //nome do objeto['aChaveQueVocêQuer']['indiceDoQueVocêQuer']
 console.log(`Uma das cidades que a ${pessoa1['fname']} esteve é ${pessoa1['cities'][2]}`)
 ```
-
 ### Empurrando informações no Objeto <h3>
 
 É bem parecido com empurrar na array, só que um pouquinho mais simples!
@@ -165,7 +162,7 @@ console.log(pessoa2) // terminal: { name: 'Leonardo', age: 35, lname: 'Vieira' }
 ```
 Ou seja, as chaves são uma grande tela em branco em que podemos colocar qualquer informação, desde que sigamos a sintaxe certa, que é *nomeDoObjeto['chave']=valor*: a **chave nome** que o objeto pessoa2 recebeu foi o **valor Leonardo**. 
 
-## Criando um objeto via função
+## Criando um objeto via função <h2>
 sintaxe: 
 *função (parametros) {*
     *let nomeObjeto = {*
@@ -198,3 +195,45 @@ return objeto
 }
 console.log(criaObjeto("Mariana", 29))
 ```
+
+## Encontrando informações dentro do objeto com map <h2>
+### Como o map trabalha <h3>
+O map pega um objeto e retorna um outro objeto novinho, mas com as características que você pediu. Vamos começar com um exemplo mais simples, com uma array.
+
+```js
+let arrayBase = [1, 10, 100] // terminal: [1, 10, 100]
+let arrayNova = arrayBase.map(parametro => 2*parametro) // terminal: [2, 20, 200]
+//arraynova  = arraybase .map (como era na antiga => como quero que fique na nova)
+```
+
+O map é uma forma mais rápida e elegante de fazer isso:
+```js
+let arrayBase = [1, 10, 100]
+let arrayNova = []
+for (i = 0; i < arrayBase.length; i++){
+    arrayNova.push(arrayBase[i]*2)
+}
+console.log(arrayNova)
+```
+Entendeu o que aconteceu? O Map, com a ajuda da função entre parênteses, transformou cada elemento da array antiga nele mesmo multiplicado por 2 e criou uma array nova.
+### Map com objetos <h3>
+
+```js
+const objeto = {
+        nome: 'Mariana',
+        sobrenome: 'Vieira',
+        contatos: {
+            pessoa1: "Iasmin",
+            pessoa2: "Leonardo",
+        }
+}
+
+const objetoNovo = objeto.map(objeto => objeto.pessoa2)
+```
+
+# Observações Gerais <h1>
+*Saiba o que tem guardado dentro de cada variável.*
+*Uma comparação sempre retorna "true" ou "false":*
+*Saiba o que tem guardado dentro de cada variável*
+console.log(`índice: ${i} - tarefa:  ${arr[i]}`)
+

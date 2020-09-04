@@ -56,26 +56,81 @@
 // pessoa2['lname'] = "Vieira"
 // console.log(pessoa2) // terminal: {}
 
-// function transformaObjeto (name, lname){
-    
-//     let objPessoa = {
-//       nome: name,
-//       sobrenome: lname,
+
+// function criaObjeto(nome, idade){
+//     let objeto = {
+//         nome,
+//         idade,
 //     }
-//     let fullName = `${objPessoa.nome} ${objPessoa.sobrenome}`
-//     return `${objPessoa.nome}, ${objPessoa.sobrenome}, ${fullName}`
-//   }
+// return objeto
+// }
 
-//   console.log(transformaObjeto("Nazaré", "Tedesco"))
+// console.log(criaObjeto("Mariana", 29))
 
-  function transformaObjeto (name, lname){
-    let objPessoa = {
-            nome: name,
-            sobrenome: lname,
-            }
-    let fullName = `${name} ${lname}`
-    let objPessoaNovo = objPessoa.map()
-    return objPessoaNovo
-  }
+// const nome = "mariana"
+// console.log(nome[2]) // terminal: "r"
 
-  console.log(transformaObjeto("Nazaré", "Tedesco"))
+// femaleRappers = ["Beyonce", "Minaj"]
+// console.log(femaleRappers)
+// femaleRappers[2] = "Elliot"
+// console.log(femaleRappers)
+
+// function imprimeObjeto (){
+//         const objeto = {
+//             nome: 'Mariana',
+//             sobrenome: 'Vieira',
+//             contatos: {
+//                 pessoa1: "Iasmin",
+//                 pessoa2: "Leonardo",
+//                 }
+//         }
+//     return objeto
+// }
+
+// console.log(imprimeObjeto())
+
+// imprimeObjeto()
+
+// function imprimeArray (){
+//     let array = ['Mariana', 'Iasmin', 'Leonardo']
+//     return array
+// }
+
+// console.log(imprimeArray())
+
+
+// console.log(arrayBase)
+// let arrayNova = arrayBase.map(i => 2*i)
+// console.log(arrayNova)
+
+// let arrayBase = [1, 10, 100]
+// console.log(arrayBase) // terminal: [ 1, 10, 200 ]
+// let arrayNova = arrayBase.map(i => 2*i)
+// console.log(arrayNova) // terminal: [ 2, 20, 200 ]
+
+// let arrayBase = [1, 10, 100]
+// let arrayNova = []
+// for (i = 0; i < arrayBase.length; i++){
+//     arrayNova.push(arrayBase[i]*20)
+// }
+// console.log(arrayNova)
+
+// let arrayBase = [1, 10, 100] // terminal: [ 1, 10, 200 ]
+// let arrayNova = arrayBase.map(parametro => 2*parametro)
+// console.log(arrayNova)
+
+// const objeto = [{
+//     nome: 'Mariana',
+//     sobrenome: 'Vieira',
+//     contatos: {
+//         pessoa1: "Iasmin",
+//         pessoa2: "Leonardo",
+//     }
+// }]
+
+// const nomePessoa2 = objeto.map(objeto => objeto.contatos[0] )
+// console.log(nomePessoa2)
+
+
+    
+     

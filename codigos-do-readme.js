@@ -55,3 +55,27 @@
 // pessoa2['age'] = 35
 // pessoa2['lname'] = "Vieira"
 // console.log(pessoa2) // terminal: {}
+
+// function transformaObjeto (name, lname){
+    
+//     let objPessoa = {
+//       nome: name,
+//       sobrenome: lname,
+//     }
+//     let fullName = `${objPessoa.nome} ${objPessoa.sobrenome}`
+//     return `${objPessoa.nome}, ${objPessoa.sobrenome}, ${fullName}`
+//   }
+
+//   console.log(transformaObjeto("Nazaré", "Tedesco"))
+
+  function transformaObjeto (name, lname){
+    let objPessoa = {
+            nome: name,
+            sobrenome: lname,
+            }
+    let fullName = `${name} ${lname}`
+    let objPessoaNovo = objPessoa.map()
+    return objPessoaNovo
+  }
+
+  console.log(transformaObjeto("Nazaré", "Tedesco"))

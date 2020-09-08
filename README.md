@@ -86,16 +86,9 @@ para agregar e retirar elementos: *push, pop, shift, unshift, slice, splice e co
 para buscar elementos dentro da array: *indexOf, lastIndexOf, includes, find, findIndex e filter.*
 para transformar arrays: map, reduce, *sort, reverse, split e join.*
 
-Abaixo, três deles:
-### arr.indexOf(oQueEstouProcurando) <h3>
-Retorna qual o índice do que estou procurando. Se não estiver na array, aparece -1.
-```js
-const coresPreferidas = ['lilas', 'azul', 'rosa', 'branco']
-console.log(coresPreferidas.indexOf(azul)) // terminal: 1
-console.log(coresPreferidas.indexOf(branco)) // terminal: 3
-console.log(coresPreferidas.indexOf(verde)) // terminal: -1
-```
-### arr.push(oQueEuQueroIncluir) <h3>
+Abaixo, quatro deles:
+### Para colocar ou retirar elementos de uma array<h3>
+#### Como empurrar coisas para uma array: arr.push(oQueEuQueroIncluir) <h4>
 Aqui é possível "empurrar" mais um participante para a array, sendo ele o último.
 ```js
 const femaleRappers = ['Elliot', 'Hill', 'Minaj']
@@ -105,7 +98,7 @@ femaleRappers.push('Thee Stalion')
 console.log(femaleRappers) // terminal: ['Elliot', 'Hill', 'Minaj', 'Thee Stalion']
 ```
 Outra forma de fazer isso, como já foi visto, é apenas escrever femaleRappers[3]='Thee Stalion' e ela será incluída por último na array. Mas, para isso, seria necessário já saber o tamanho da array para incluir na última posição e não correr o risco de substituir quem já estava dentro.
-### arr.pop() <h3>
+#### Como extrair o último item de uma array: arr.pop() <h4>
 Arranca o último item de uma array.
 ```js
 const trueSingers = ['Knowles', 'Houston', 'Keys', 'Spears']
@@ -113,6 +106,35 @@ console.log(trueSingers) // terminal: ['Knowles', 'Houston', 'Keys', 'Spears']
 console.log(`Retiramos a ${trueSingers.pop()} da lista de cantoras`)
 console.log(trueSingers) // terminal: ['Knowles', 'Houston', 'Keys']
 ```
+### Para Buscar Elementos dentro de uma array <h3> 
+#### Como achar um elemento numa array (sabendo seu índice): arr.indexOf(oQueEstouProcurando) <h4>
+Retorna qual o índice do que estou procurando. Se não estiver na array, aparece -1.
+```js
+const coresPreferidas = ['lilas', 'azul', 'rosa', 'branco']
+console.log(coresPreferidas.indexOf(azul)) // terminal: 1
+console.log(coresPreferidas.indexOf(branco)) // terminal: 3
+console.log(coresPreferidas.indexOf(verde)) // terminal: -1
+```
+### Para Transformar arrays <h3>
+#### Como dividir uma palavra ou número (uma array) e transformar em várias arrays: arr.split() <h4>
+```js
+const divideString = (entrada) => {
+    let arrayString = entrada.split('')
+    return arrayString
+}
+```
+#### Como inverter a ordem dos itens de uma array: arr.reverse() <h4>
+```js
+const inverteString = (precisaSerEmFormatoStringComColchetes) => {
+    let arrayInvertida = precisaSerEmFormatoStringComColchetes.reverse()
+    console.log(arrayInvertida)
+}
+
+inverteString([2, 3, 4, 5]) // terminal: [5, 4, 3, 2]
+```
+
+
+
 
 
 

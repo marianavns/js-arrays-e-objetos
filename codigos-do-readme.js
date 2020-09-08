@@ -131,6 +131,37 @@
 // const nomePessoa2 = objeto.map(objeto => objeto.contatos[0] )
 // console.log(nomePessoa2)
 
+// let numeros = [0, 1, 2, 3, 4, 5, 6];
+// let total = numeros.reduce((acumulador, numero, indice, original) => {
+// return acumulador += numero;
+// }, 0)
+// console.log(total)
 
+// function divideString(entrada){
+// let arrayString = entrada.split('')
+// console.log(arrayString)
+// }
+
+// divideString('484848')
+
+// const divideString = (entrada) => {
+//     let arrayString = entrada.split('')
+//     return arrayString
+// }
+
+// console.log(divideString('484848'))
+
+// const inverteString = (entrada) => {
+//     let arrayInvertida = entrada.reverse()
+//     console.log(arrayInvertida)
+// }
+
+// inverteString([2, 3, 4, 5])
     
+const inverteString = (precisaSerEmFormatoStringComColchetes) => {
+    let arrayInvertida = precisaSerEmFormatoStringComColchetes.reverse()
+    console.log(arrayInvertida)
+}
+
+inverteString([2, 3, 4, 5])
      

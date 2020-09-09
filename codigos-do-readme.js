@@ -158,10 +158,73 @@
 
 // inverteString([2, 3, 4, 5])
     
-const inverteString = (precisaSerEmFormatoStringComColchetes) => {
-    let arrayInvertida = precisaSerEmFormatoStringComColchetes.reverse()
-    console.log(arrayInvertida)
-}
+// const inverteString = (precisaSerEmFormatoStringComColchetes) => {
+//     let arrayInvertida = precisaSerEmFormatoStringComColchetes.reverse()
+//     console.log(arrayInvertida)
+// }
 
-inverteString([2, 3, 4, 5])
-     
+// inverteString([2, 3, 4, 5])
+
+// const televisao = {
+//     emissora: "globo",
+//     sedes: {
+//             atuacao: "Rio de Janeiro",
+//             jornalismo: {
+//                 jornalismo1: "São Paulo",
+//                 jornalismo2: "Amazonas",
+//                 jornalismo3: {
+//                     subsede1: "Recife",
+//                     subsede2: "Caruaru",
+//                 }
+                    
+//             }
+//         } 
+//     }
+
+// console.log(televisao.sedes.jornalismo.jornalismo3.subsede2)
+
+// let string = "mariana"
+// string.idade = 29
+// console.log(string.idade)
+
+// const input = require('readline-sync')
+
+// let entrada = input.question(`Qual informacao voce quer adicionar nesta pessoa? `)
+// let resposta = input.question(`E qual e a resposta? `)
+
+// let objeto = {
+//     nome: "renata",
+//     idade: 30,
+// }
+
+// objeto[entrada] = resposta
+// console.log(objeto)
+
+// let objeto = {
+//     Nome: 'Renata',
+//     Idade: 30,
+// }
+// objeto['Cidade'] = 'Recife'
+// console.log(objeto)
+
+// let numero = 5848545
+// console.log('Essa propriedade retorna se a entrada é um "não-número" [' + isNaN(numero) + "]")
+
+// let nome = 5848545
+// console.log(nome, isNaN(nome))
+
+// let nome = 5848545
+// console.log(nome, isNaN(nome))
+
+// let numero = 5848545
+// console.log('Essa propriedade retorna se a entrada é um "não-número" [' + isNaN(numero) + "]")
+// // false
+
+// let nome = 'Mariana'
+// console.log("Essa propriedade retorna o tamanho da string: " + nome.length)
+// // 7
+// console.log("Maiúsculo: " + nome.toUpperCase())
+
+let string = "Mariana"
+console.log(string.indexOf("i"))
+

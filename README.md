@@ -1,6 +1,10 @@
 
 # Reprograma Semana 4 - Arrays e Objetos <h1>
 
+1. [Como cada um se parece](#Como-cada-um-se-parece)
+2. [Arrays](#Arrays)
+3. [Objetos](#Objetos)
+
 ## Como cada um se parece
 
 ![arrayeobjeto](https://i.ibb.co/p4VVmCQ/reprograma-s4-array-e-objeto.png)
@@ -10,7 +14,7 @@ Arrays armazenam listas. Objetos armazenam elementos simples, mas com várias ca
 
 
 
-# Arrays <h1>
+## Arrays <h2>
 
 ## Primeiros Passos com Arrays <h2>
 Array é um arranjo, uma matriz. As arrays do JavaScript aceitam dados mistos, dá pra colocar dados de diferentes tipos lá - números, strings, conjuntos chave-valor... E lembre-se: o primeiro índice da array é sempre 0.
@@ -107,6 +111,8 @@ console.log(`Retiramos a ${trueSingers.pop()} da lista de cantoras`)
 console.log(trueSingers) // terminal: ['Knowles', 'Houston', 'Keys']
 ```
 ### Para Buscar Elementos dentro de uma array <h3> 
+ #### Filter <h4>
+ Filter recebe booleano, mas acho que não é esse mesmo filter aqui. O filter ensinado em aula serve para criar uma nova array baseada num parâmetro.
 #### Como achar um elemento numa array (sabendo seu índice): arr.indexOf(oQueEstouProcurando) <h4>
 Retorna qual o índice do que estou procurando. Se não estiver na array, aparece -1.
 ```js
@@ -132,14 +138,15 @@ const inverteString = (precisaSerEmFormatoStringComColchetes) => {
 
 inverteString([2, 3, 4, 5]) // terminal: [5, 4, 3, 2]
 ```
+#### Map <h4>
+Map recebe uma estrutura de dados.
 
 
 
 
 
 
-
-# Objetos <h1>
+# Objetos <h2>
 
 ## Estrutura Básica de Objeto <h2>
 Os objetos são, tenta lembrar assim, como grandes matrizes. Essa é a estrutura básica dos objetos:
@@ -162,6 +169,26 @@ Lembra que em array usamos o índice para achar algo? Em objetos, usamos uma str
 sintaxe: **nomeDoObjeto**.*aChaveQueVocêQuer*
 ```js
 console.log(`O nome da pessoa no objeto é ${pessoa1.fname}`)
+```
+É possível colocar vários pontos, caso o objeto tenha mais e mais objetos dentro dele. Exemplo:
+```js
+const televisao = {
+    emissora: "globo",
+    sedes: {
+            atuacao: "Rio de Janeiro",
+            jornalismo: {
+                jornalismo1: "São Paulo",
+                jornalismo2: "Amazonas",
+                jornalismo3: {
+                    subsede1: "Recife",
+                    subsede2: "Caruaru",
+                }
+                    
+            }
+        } 
+    }
+
+console.log(televisao.sedes.jornalismo.jornalismo3.subsede2) // Terminal: Caruaru
 ```
 #### Notação de Colchetes <h4>
 sintaxe: **nomeDoObjeto***['aChaveQueVocêQuer']['indiceDoQueVocêQuer']*
@@ -251,6 +278,57 @@ const objeto = {
 }
 
 const objetoNovo = objeto.map(objeto => objeto.pessoa2)
+```
+
+
+## Propriedades e Métodos dos Objetos <h2>
+### Adicionando uma propriedade num objeto com chaves <h3>
+```js
+let objeto = {
+    nome: 'renata',
+    idade: 30,
+}
+objeto['Cidade'] = 'Recife' // Adicionei mais uma propriedade (mais uma chave-valor) no objeto.
+
+console.log(objeto)
+// { Nome: 'Renata', Idade: 30, Cidade: 'Recife' }
+```
+
+
+## Propriedades, Métodos e Funções dos Não-Objetos (Strings, Números e Booleanos) <h2>
+Importante: Strings, numbers e booleans não são objetos. Sendo assim, **não podemos atribuir propriedades a strings, numbers e booleans** como fizemos no tópico passado com os objetos. Exemplo:
+```js
+let pessoa = "Mariana"
+pessoa.idade = 29 
+// Tentando atribuir a idade para a string pessoa "Mariana"
+console.log(pessoa.idade) 
+// undefined
+console.log(pessoa) 
+// "Mariana". Nada foi acrescentado à string.
+``` 
+
+Mas, ainda assim, é possível "jogar" nas strings, numbers e booleans algumas propriedades, métodos e funções nativas que nos retornam valores como o tamanho da string, a string toda escrita em maiúsculo, o boolean (a resposta) se a entrada é um "não-número"... Exemplos:
+```js
+// length: propriedade 
+// (associação entre chave e valor)
+let nome = 'Mariana'
+console.log("Essa propriedade retorna o tamanho da string: " + nome.length) // 7
+
+// toUpperCase: método 
+// (função que trabalha com string e recebe parâmetro)
+console.log("Maiúsculo " + nome.toUpperCase(nome))
+
+// push: método
+[X] EXCLUSIVO DE OBJETOS [X]
+
+// indexOf: método
+let string = "Mariana"
+console.log(string.indexOf("i"))
+
+// isNan: função (função que trabalha com número)
+let numero = 5848545
+console.log('Essa propriedade retorna se a entrada é um "não-número" [' + isNaN(numero) + "]")
+// false
 ```
 
 # Observações Gerais <h1>

@@ -13,9 +13,8 @@
     3.3 [Como Criar um objeto via função](#como-criar-um-objeto-via-função)
     3.4 [Explorando os elementos de um objeto](#explorando-os-elementos-de-um-objeto)
 
-# Organizado <h1>
 
-## Como cada um se parece <h2>
+# Como cada um se parece <h1>
 
 ![arrayeobjeto](https://i.ibb.co/p4VVmCQ/reprograma-s4-array-e-objeto.png)
 
@@ -23,15 +22,15 @@ Arrays armazenam listas. Objetos armazenam elementos simples, mas com várias ca
 [Arrays usam chaves]. {Objetos usam colchetes}.
 
 
-## Arrays <h2>
+# Arrays <h1>
 
-### Estrutura Básica de Array <h3>
+## Estrutura Básica de Array <h2>
 Array é um arranjo, uma matriz. As arrays do JavaScript aceitam dados mistos, dá pra colocar dados de diferentes tipos lá - números, strings, conjuntos chave-valor... E lembre-se: o primeiro índice da array é sempre 0.
 ```js
 let arrayExemplo = ["mariana", 29, ["recife", "jaboatao", "sao paulo"], {curso: "backend", instituicao: "reprograma"}]
 ```
 
-### Como Criar uma Array <h3>
+## Como Criar uma Array <h2>
 ```js
 const novaArray = []
 novaArray[0] = "banana"
@@ -42,16 +41,16 @@ console.log(novaArray)
 ```
 É possível adicionar item numa array vazia, mas também numa array já existente. É só ATRIBUIR VALOR ÀQUELE ÍNDICE: nomeDaArray[indice] = valorASerIncluido. Se você usar um índice que já está preenchido na array, *ele será substituído*.
 
-### Explorando os elementos de uma Array <h3>
+## Explorando os elementos de uma Array <h2>
 
-#### Fazendo verificações com os elementos das arrays <h4>
+### Fazendo verificações com os elementos das arrays <h3>
 ```js
 const cpf = [072, 200, 684, 5, 0]
 console.log(cpf[0] === "072") //false, pois você tá comparando um número com uma string.
 console.log(cpf[0] === 072) // true, pois agora sim você está comparando dois números.
 ```
 
-#### Como mostrar apenas um item da array? <h4>
+### Como mostrar apenas um item da array? <h3>
 ```js
 const cpf = [072, 200, 684, 5, 0]
 console.log(cpf[3]) // "índice 3 do CPF" ou "CPF índice 3"
@@ -61,7 +60,7 @@ const nome = "mariana"
 console.log(nome[95-93]) // terminal: "r" - String é uma array de caracteres!
 ```
 
-### Como imprimir todos os elementos da array em linhas separadas <h3>
+## Como imprimir todos os elementos da array em linhas separadas <h2>
 É possível imprimir na tela todos os itens da array em linhas separadas, índice por índice, com a ajuda do for:
 ```js
 // Declarando a Array
@@ -76,9 +75,9 @@ console.log(nome[95-93]) // terminal: "r" - String é uma array de caracteres!
     imprimeTarefas(tarefas)
 ```
 
-## Objetos <h2>
+# Objetos <h1>
 
-### Estrutura Básica de Objeto <h3>
+## Estrutura Básica de Objeto <h2>
 Os objetos são, tenta lembrar assim, como grandes matrizes. Essa é a estrutura básica dos objetos:
 ```js
 const pessoa1 = {
@@ -89,7 +88,7 @@ const pessoa1 = {
 }
 ```
 
-### Como criar um objeto <h3>
+## Como criar um objeto <h2>
 ```js
 const pessoa1 = {
     fname: 'Mariana', // conjunto chave-valor
@@ -107,7 +106,7 @@ pessoa1.cor = 'lilás'
 //}
 ```
 
-### Como criar um objeto via função <h3>
+## Como criar um objeto via função <h2>
 ```js 
 function criaObjeto (valor1, valor2) {
     let objeto = {                  // É preciso nomear esse "objeto". Pode ser "aluna", "pessoa"...
@@ -132,11 +131,11 @@ return objeto
 console.log(criaObjeto("Mariana", 29))
 ```
 
-### Explorando os elementos do Objeto <h3>
+## Explorando os elementos do Objeto <h2>
 
 Existem duas formas de saber qual o valor está dentro de cada chave de um objeto. 
 
-#### Notação de Ponto <h4>
+### Notação de Ponto <h3>
 
 sintaxe: **nomeDoObjeto**.*aChaveQueVocêQuer*
 ```js
@@ -160,11 +159,11 @@ const televisao = {
 console.log(televisao.sedes.jornalismo.jornalismo2.subsede2) // Terminal: Caruaru
 ```
 
-#### Notação de Colchetes <h4>
+### Notação de Colchetes <h3>
 
 sintaxe: **nomeDoObjeto***['aChaveQueVocêQuer']['indiceDoQueVocêQuer']*
 
-Esse caso é melhor que o de cima, pois permite variáveis! Isso pode trazer muitas variações!
+Esse caso é melhor que o de cima, pois permite variáveis! Isso pode trazer muitas opções!
 ```js
                                             //nome do objeto['aChaveQueVocêQuer']['indiceDoQueVocêQuer']
 console.log(`Uma das cidades que a ${pessoa1['fname']} esteve é ${pessoa1['cities'][2]}`)

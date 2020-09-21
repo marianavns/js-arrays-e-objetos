@@ -1,0 +1,23 @@
+{
+  "name": "reprograma-s4-arrays-objetos",
+  "version": "1.0.0",
+  "description": "1. [Como cada um se parece](#Como-cada-um-se-parece) 2. [Arrays](#Arrays)     2.1 [Estrutura Básica de Array](#Estrutura-básica-de-array)     2.2 [Como Criar uma Array](#Como-construir-uma-array)     2.3 [Explorando os elementos da Array](#Explorando-os-elementos-da-array)     2.4 [Como imprimir todos os elementos de uma array em linhas separadas](#Como-imprimir-todos-os-elementos-de-uma-array-em-linhas-separadas) 3. [Objetos](#Objetos)     3.1 [Estrutura Básica de Objeto](#Estrutura-básica-de-objeto)     3.2 [Como Criar um objeto](#como-construir-um-objeto)     3.3 [Como Criar um objeto via função](#como-criar-um-objeto-via-função)     3.4 [Explorando os elementos de um objeto](#explorando-os-elementos-de-um-objeto)",
+  "main": "exercicios-array.js",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marianavns/reprograma-s4-arrays-objetos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marianavns/reprograma-s4-arrays-objetos/issues"
+  },
+  "homepage": "https://github.com/marianavns/reprograma-s4-arrays-objetos#readme"
+}

@@ -2,16 +2,32 @@
 # Reprograma Semana 4 - Arrays e Objetos <h1>
 
 1. [Como cada um se parece](#Como-cada-um-se-parece)
-2. [Arrays](#Arrays)
-    2.1 [Estrutura Básica de Array](#Estrutura-básica-de-array)
-    2.2 [Como Criar uma Array](#Como-construir-uma-array)
-    2.3 [Explorando os elementos da Array](#Explorando-os-elementos-da-array)
-    2.4 [Como imprimir todos os elementos de uma array em linhas separadas](#Como-imprimir-todos-os-elementos-de-uma-array-em-linhas-separadas)
-3. [Objetos](#Objetos)
-    3.1 [Estrutura Básica de Objeto](#Estrutura-básica-de-objeto)
-    3.2 [Como Criar um objeto](#como-construir-um-objeto)
-    3.3 [Como Criar um objeto via função](#como-criar-um-objeto-via-função)
-    3.4 [Explorando os elementos de um objeto](#explorando-os-elementos-de-um-objeto)
+
+2. [Conceitos Introdutórios](#Conceitos-Introdutórios)
+
+    2.1 [Propriedades](#Propriedades)
+
+    2.2 [Métodos](#Métodos)
+
+3. [Arrays](#Arrays)
+
+    3.1 [Estrutura Básica de Array](#Estrutura-básica-de-array)
+
+    3.2 [Como Criar uma Array](#Como-construir-uma-array)
+
+    3.3 [Explorando os elementos da Array](#Explorando-os-elementos-da-array)
+
+    3.4 [Como imprimir todos os elementos de uma array em linhas separadas](#Como-imprimir-todos-os-elementos-de-uma-array-em-linhas-separadas)
+
+4. [Objetos](#Objetos)
+
+    4.1 [Estrutura Básica de Objeto](#Estrutura-básica-de-objeto)
+
+    4.2 [Como Criar um objeto](#como-construir-um-objeto)
+
+    4.3 [Como Criar um objeto via função](#como-criar-um-objeto-via-função)
+
+    4.4 [Explorando os elementos de um objeto](#explorando-os-elementos-de-um-objeto)
 
 
 # Como cada um se parece
@@ -20,6 +36,35 @@
 
 Arrays armazenam listas. Objetos armazenam elementos simples, mas com várias características.
 [Arrays usam chaves]. {Objetos usam colchetes}.
+
+
+# Conceitos Introdutórios
+
+Antes de entrar na conversa sobre arrays e objetos, é necessário conhecer algumas ferramentas usadas em tipos primitivos que servem para descrevê-los, mas que também são muito úteis na manipulação de arrays e objetos.
+
+## Propriedades
+
+> Guarde no coração: Todos os valores JS possuem propriedades, exceto *null* e *undefined*.
+
+As propriedades são as características de algum valor. Exemplo: quando escrevemos 
+```js
+let computador = "computador"
+console.log(computador.length)
+```
+estamos querendo saber qual o tamanho da string *"computador"*, que foi guardada na variável `computador`. O retorno no console será `10`.
+
+Ou seja:
+computador *.length*
+\\\\\\\\\\  propriedade contida no **tipo primitivo string computador**
+math *.max*
+\\\\\\ propriedade contida no **objeto math**. *Esse conjunto forma uma função.*
+
+Outra forma de acessar propriedades:
+```js
+computador['length']
+```
+
+obs.: usar essa sintaxe com algo que não é uma propriedade vai mostrar "o que é isso entre aspas".
 
 
 # Arrays

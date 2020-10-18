@@ -23,7 +23,7 @@ const atualizacao = [
     }
 ]
 
-// # Crie uma array com o nome das comidas:
+/// # Crie uma array com o nome das comidas:
 
 // let allFoodsArray = pessoas.map(objeto => objeto.food)
 // console.log(allFoodsArray)

@@ -16,7 +16,7 @@ const pessoas = [
     {
         name: "Carlos",
         age: 73,
-        food: "salad"
+        food: "salada"
     },
     {
         name: "Helena",
@@ -32,8 +32,8 @@ const pessoas = [
 
 const atualizacao = [
     {
-        food: "fruits",
-        drink: "water"
+        food: "frutas",
+        drink: "água"
     }
 ]
 

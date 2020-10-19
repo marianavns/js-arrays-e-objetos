@@ -1,3 +1,12 @@
+let escreve = (frase) => console.log(frase)
+let escreveInicio = (frase) => { 
+    console.log(`\n ${frase}`)
+}
+
+const responsavel = "Mariana"
+
+const idades = [29, 73, 85, 90]
+
 const pessoas = [
     {
         name: "Mariana",
@@ -14,6 +23,11 @@ const pessoas = [
         age: 85,
         food: "chocolate"
     },
+    {
+        name: "Agenor",
+        age: 90,
+        food: "não cadastrado"
+    }
 ]
 
 const atualizacao = [
@@ -23,23 +37,48 @@ const atualizacao = [
     }
 ]
 
-/// # Crie uma array com o nome das comidas:
 
-// let allFoodsArray = pessoas.map(objeto => objeto.food)
-// console.log(allFoodsArray)
+// #1 Coloque o nome da responsável todo em letras maiúsculas:
 
-/* O QUE FAZ O MAP? 
-O map roda uma função para cada elemento de uma array e cria uma array nova. No exemplo acima, o map fez isso. A função era "de cada objeto, pegue apenas a propriedade food (rodou a função) e crie uma array nova (allfoods)*/
+    // let maiusculas = responsavel.toUpperCase()
+    // console.log(maiusculas)
 
-// # Crie uma array de objetos com o nome das comidas:
+// #2 Filtre as idades dos idosos na lista - criando um Array e Criando um Objeto:
 
-let allFoodsObject = {"vvv": 23}
-Object.values(pessoas).forEach(key => {
-    pessoas[key] = allFoodsObject[key]
-})
-console.log(Object.values(pessoas))
-// console.log(allFoodsObject)
+    // let idadesDosIdosos = idades.filter(element => (element > 60))
 
-// Object.keys(updateCollaborator).forEach(key => {
-    //     collabsToUpdate[key] = updateCollaborator[key]
-    // })
+            /*
+            O que faz o FILTER?
+            - Percorre uma array procurando elementos que atendem a tal condição. 
+            - Se encontrar, joga o elemento numa array nova.
+            */
+
+    // escreveInicio(`Estes são os filters para idades maiores que 60:`)
+    // escreve('Este abaixo retorna uma array naturalmente porque saiu de uma array:')
+    // escreve(idadesDosIdosos)
+    // escreve(`Já este retorna um objeto porque eu configurei assim.`)
+    // escreve({idadesDosIdosos})
+
+    
+// #3 Filtre as pessoas que não tem a comida cadastrada:
+
+    // let noFood = pessoas.filter(objeto => objeto.food == "não cadastrado")
+    // escreveInicio(`Este é o filter para pessoas sem comida cadastrada:`)
+    // escreve(noFood)
+
+
+// #4 Crie uma array com o nome das comidas:  
+
+    // let allFoodsArray = pessoas.map(objeto => objeto.food)
+    // escreveInicio(`Este é o map que retorna array apenas com os valores nas chaves "food":`)
+    // escreve(allFoodsArray)
+
+            /* 
+            O que faz o MAP?
+            - Percorre uma array rodando uma função em cada elemento. 
+            - Devolve uma array nova com esses elementos depois da função.
+            */
+
+// # Crie uma array de objetos com o nome das comidas: 
+
+// Não dá para fazer { "chocolat", "salad", "chocolat" }. Isso não é um objeto. Objeto precisa de chave e valor.

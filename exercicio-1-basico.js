@@ -50,7 +50,7 @@ const atualizacao = [
             /*
             O que faz o FILTER?
             - Percorre uma array procurando elementos que atendem a tal condição. 
-            - Se encontrar, joga o elemento numa array nova.
+            - Se encontrar, joga o elemento numa array nova.  
             */
 
     // escreveInicio(`Estes são os filters para idades maiores que 60:`)

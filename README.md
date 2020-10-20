@@ -195,7 +195,7 @@ console.log(nome[95-93])
 
 Lembra que falamos lá no começo dos métodos? O que são os métodos? São formas de fazer coisas dentro de um array. Métodos sempre envolvem uma ação que vai mudar alguma coisa.
 
-Os métodos e suas descrições está nesta ![planilha ainda em construção](https://docs.google.com/spreadsheets/d/1owj6p3P4QZXCcPmqNtQq-XBv1TlA6b_lCGKKWMO6_TI/edit?usp=sharing) e os exemplos dos usos está neste repositório com os nomes *metodo-NOMEDOMÉTODO-exercicios.js*.
+Os métodos e suas descrições está nesta [planilha ainda em construção](https://docs.google.com/spreadsheets/d/1owj6p3P4QZXCcPmqNtQq-XBv1TlA6b_lCGKKWMO6_TI/edit?usp=sharing) e os exemplos dos usos está neste repositório com os nomes *metodo-NOMEDOMÉTODO-exercicios.js*.
 
 Não se preocupe: métodos são coisas para se aprender à parte, dedicando vários dias e fazendo bastante exercício e merece um repositório só para eles, mas aqui vai um resuminho sobre os principais métodos e o que eles podem fazer por nós:
 

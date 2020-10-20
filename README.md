@@ -9,15 +9,17 @@
 
     2.2 [Métodos](#Métodos)
 
-3. [Arrays](#Arrays)
+3. [Arrays Parte 1 Introdução](#Arrays)
 
-    3.1 [Estrutura Básica de Array](#Estrutura-básica-de-array)
+    3.1 [Estrutura Básica de Uma Array](#Estrutura-Básica-de-Uma-Array)
 
-    3.2 [Como Criar uma Array](#Como-construir-uma-array)
+    3.2 [Como Criar uma Array](#Como-Criar-Uma-Array)
 
-    3.3 [Explorando os elementos da Array](#Explorando-os-elementos-da-array)
+    3.3 [Como Editar uma Array](#Como-Editar-Uma-Array)
 
-    3.4 [Como imprimir todos os elementos de uma array em linhas separadas](#Como-imprimir-todos-os-elementos-de-uma-array-em-linhas-separadas)
+4. [Arrays Parte 2 Explorando os elementos da Array](#Explorando-os-elementos-da-array)
+
+    4.1 [Como imprimir todos os elementos de uma array em linhas separadas](#Como-imprimir-todos-os-elementos-de-uma-array-em-linhas-separadas)
 
 4. [Objetos](#Objetos)
 
@@ -30,12 +32,24 @@
     4.4 [Explorando os elementos de um objeto](#explorando-os-elementos-de-um-objeto)
 
 
-# Como cada um se parece
+# Como Cada Um Se Parece
 
-![arrayeobjeto](https://i.ibb.co/p4VVmCQ/reprograma-s4-array-e-objeto.png)
+```js
+let array = [
+    'equipamento', 
+    'móvel', 
+    'ferramenta'
+]
 
-Arrays armazenam listas. Objetos armazenam elementos simples, mas com várias características.
-[Arrays usam chaves]. {Objetos usam colchetes}.
+let objeto = {
+    equipamento: 'computador',
+    móvel: 'mesa',
+    ferramenta: 'alicate'
+}
+```
+
+Arrays armazenam elementos. Objetos armazenam conjuntos chave-valor.
+[Arrays usam colchetes]. {Objetos usam chaves}.
 
 
 # Conceitos Introdutórios
@@ -54,9 +68,13 @@ Por exemplo, quando escrevemos:
 let computador = "computador"
 console.log(computador.length)
 ```
-ou
-`console.log(computador['length'])`
-estamos querendo saber qual o tamanho da string *"computador"*, que foi guardada na variável `computador`. O retorno no console, então, será `10`.
+ou </br>
+
+```js
+console.log(computador['length'])
+```
+
+estamos querendo saber qual o tamanho da string *"computador"*, que foi guardada na variável `computador`. O retorno no console, então, será `10`, pois computador tem 10 letras.
 
 Ou seja: 
 - computador *.length*: propriedade do tipo primitivo string "computador".
@@ -65,46 +83,98 @@ Ou seja:
 
 Já os métodos sempre **fazem** alguma coisa. Seja colocar uma string em maiúsculo, retirar o último item de uma lista (array) ou filtrar um conjunto de informações (objetos). Existe sempre uma ação envolvida.
 
-# Arrays
+# Arrays Parte 1 Introdução
+Array é uma lista, um arranjo, uma matriz. 
 
-## Estrutura Básica de Array
-Array é um arranjo, uma matriz. As arrays do JavaScript aceitam dados mistos, dá pra colocar dados de diferentes tipos lá - números, strings, conjuntos chave-valor... E lembre-se: o primeiro índice da array é sempre 0.
+Ela tem os **elementos e**, sem que precisemos preencher na array, ela tem também os **índices** dos elementos.
+
+Esses índices são as posições que cada elemento ocupa na matriz.
+
+`let minhaPrimeiraMatriz = ['doce', 'salgado', 'amargo']`
+
+- *doce*, *salgado* e *amargo* são os **elementos** da array;
+
+- *0*, *1* e *2* são os **índices** 
+(e não *1*, *2* e *3* como poderíamos imaginar, pois **o primeiro índice da array é sempre 0**).
+
+## Estrutura Básica de Uma Array
+
+Como vimos, as arrays têm elementos e índices. Então assim fica a estrutura:
+
+`[ elemento1 , elemento2, elemento3, ...]`
+
+É importante destacar que, em JavaScript, as arrays aceitam qualquer tipo de elemento - números, strings, conjuntos chave-valor, etc. Dessa forma, a array deixa aquele formato mais simples que vimos no último tópico. 
+
+Veja um exemplo de array mais variada: 
+
 ```js
-let arrayExemplo = ["mariana", 29, ["recife", "jaboatao", "sao paulo"], {curso: "backend", instituicao: "reprograma"}]
+let arrayVariada = [
+  "mariana", 
+  29, 
+  ["Recife", "Jaboatao", "São paulo"], 
+  {curso: "backend", instituicao: "reprograma"}
+]
 ```
 
 ## Como Criar uma Array
+
+É possível fazer isso apenas escrevendo os itens no seu VSCode usando a estrutura vista anteriormente. A outra forma é "empurrando" cada elemento dentro de cada índice.
+
+Olhe esse exemplo para entender melhor do que estamos falando:
+
 ```js
 const novaArray = []
 novaArray[0] = "banana"
-novaArray[1] = 2
+novaArray[1] = "geleia"
 novaArray[2] = true
-
-console.log(novaArray)
-```
-É possível adicionar item numa array vazia, mas também numa array já existente. É só ATRIBUIR VALOR ÀQUELE ÍNDICE: nomeDaArray[indice] = valorASerIncluido. Se você usar um índice que já está preenchido na array, *ele será substituído*.
-
-## Explorando os elementos de uma Array
-
-### Fazendo verificações com os elementos das arrays
-```js
-const cpf = [072, 200, 684, 5, 0]
-console.log(cpf[0] === "072") //false, pois você tá comparando um número com uma string.
-console.log(cpf[0] === 072) // true, pois agora sim você está comparando dois números.
 ```
 
-### Como mostrar apenas um item da array?
-```js
-const cpf = [072, 200, 684, 5, 0]
-console.log(cpf[3]) // "índice 3 do CPF" ou "CPF índice 3"
-//resultado no terminal: 684
+1. Declaramos uma constante que é uma array vazia;
+2. Adicionamos *banana* no índice 0;
+3. *geleia* no índice 1;
+4. *true* no índice 2.
 
+## Como editar uma array
+
+É possível apenas adicionar item numa array vazia, mas também numa array já existente e editar os elementos que já estão lá. 
+
+É só *atribuir valor àquele índice*:
+
+```js
+const novaArray = ["banana", "geleia", true]
+novaArray[0] = "maçã"
+novaArray[3] = "marília"
+novaArray[20] = "recife"
+
+// novaArray = ["maçã", "geleia", true, "marília", <16 empty itens>, "recife"]
+```
+
+Ou seja: Se usar um índice que já está preenchido na array, ele será substituído. Se usar um que ainda não tem na array, ele será incluído.
+
+# Explorando os elementos de uma Array
+
+## Mostrando apenas um item da array
+
+Tenha a array e referencie seu índice. Será mostrado o que está guardado naquele índice.
+
+```js
+const papelaria = ['lápis', 'borracha', 'caneta']
+console.log(papelaria[2])
+// 'caneta'
+```
+*"índice 2 de papelaria" ou "papelaria índice 2"*
+
+```
 const nome = "mariana"
-console.log(nome[95-93]) // terminal: "r" - String é uma array de caracteres!
+console.log(nome[95-93]) 
+// "r" 
 ```
+> Afinal *String é uma array de caracteres*!
 
-## Como imprimir todos os elementos da array em linhas separadas
+## Imprimindo os elementos da array em linhas separadas
+
 É possível imprimir na tela todos os itens da array em linhas separadas, índice por índice, com a ajuda do for:
+
 ```js
 // Declarando a Array
     const tarefas = ["Estudar", "Assistir vídeo", "Pesquisar Cursos"]
@@ -117,6 +187,7 @@ console.log(nome[95-93]) // terminal: "r" - String é uma array de caracteres!
 //Chamando a função
     imprimeTarefas(tarefas)
 ```
+
 
 # Objetos
 

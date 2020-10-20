@@ -1,7 +1,9 @@
 
-# Reprograma Semana 4 - Arrays e Objetos <h1>
+# Reprograma Semana 4 - Arrays e Objetos
 
-1. [Como cada um se parece](#Como-cada-um-se-parece)
+
+
+1. [Dando uma Espiada Como Cada Um Se Parece](#Dando-Uma-Espiada-Como-Cada-um-Se-parece)
 
 2. [Conceitos Introdutórios](#Conceitos-Introdutórios)
 
@@ -17,22 +19,19 @@
 
     3.3 [Como Editar uma Array](#Como-Editar-Uma-Array)
 
-4. [Arrays Parte 2 Explorando os elementos da Array](#Explorando-os-elementos-da-array)
+4. [Arrays Parte 2 Explorando os Elementos da Array](#Arrays-Parte-2-Explorando-os-Elementos-da-Array)
 
-    4.1 [Como imprimir todos os elementos de uma array em linhas separadas](#Como-imprimir-todos-os-elementos-de-uma-array-em-linhas-separadas)
+    4.1 [Conhecendo Quantos Elementos Tem na Array](#Conhecendo-Quantos-Elementos-Tem-na-Array)
 
-4. [Objetos](#Objetos)
+    4.2 [Mostrando Apenas Um Elemento da Array](#Mostrando-Apenas-Um-Elemento-da-Array)
 
-    4.1 [Estrutura Básica de Objeto](#Estrutura-básica-de-objeto)
+    4.3 [Imprimindo os Elementos da Array em Linhas Separadas](#Imprimindo-os-Elementos-da-Array-em-Linhas=Separadas)
 
-    4.2 [Como Criar um objeto](#como-construir-um-objeto)
+5. [Arrays Parte 3 Métodos de Array](#Arrays-Parte-3-Métodos-de-Array)
 
-    4.3 [Como Criar um objeto via função](#como-criar-um-objeto-via-função)
+# Dando uma Espiada Como Cada Um Se Parece
 
-    4.4 [Explorando os elementos de um objeto](#explorando-os-elementos-de-um-objeto)
-
-
-# Como Cada Um Se Parece
+![Homem vindo do teto amarrado pela cintura espiando o notebook](https://i.imgur.com/foCucGB.gif)
 
 ```js
 let array = [
@@ -60,9 +59,7 @@ Antes de entrar na conversa sobre arrays e objetos, é necessário conhecer algu
 
 > Guarde no coração: Todos os valores JS possuem propriedades, sejam strings, números, arrays, objetos... exceto *null* e *undefined*.
 
-As propriedades são as características de algum valor.
-
-Por exemplo, quando escrevemos: 
+As propriedades são as características de algum valor. Por exemplo, quando escrevemos: 
 
 ```js
 let computador = "computador"
@@ -84,16 +81,14 @@ Ou seja:
 Já os métodos sempre **fazem** alguma coisa. Seja colocar uma string em maiúsculo, retirar o último item de uma lista (array) ou filtrar um conjunto de informações (objetos). Existe sempre uma ação envolvida.
 
 # Arrays Parte 1 Introdução
-Array é uma lista, um arranjo, uma matriz. 
 
-Ela tem os **elementos e**, sem que precisemos preencher na array, ela tem também os **índices** dos elementos.
+![ilustração de homem segurando uma lista do tamanho dele](https://i.imgur.com/2jGKnWW.gif)
 
-Esses índices são as posições que cada elemento ocupa na matriz.
+Array é uma lista de **elementos**. Cada elemento possui o seu **índice**, que é a posição que ele ocupa na array. Veja o exemplo:
 
 `let minhaPrimeiraMatriz = ['doce', 'salgado', 'amargo']`
 
 - *doce*, *salgado* e *amargo* são os **elementos** da array;
-
 - *0*, *1* e *2* são os **índices** 
 (e não *1*, *2* e *3* como poderíamos imaginar, pois **o primeiro índice da array é sempre 0**).
 
@@ -103,7 +98,7 @@ Como vimos, as arrays têm elementos e índices. Então assim fica a estrutura:
 
 `[ elemento1 , elemento2, elemento3, ...]`
 
-É importante destacar que, em JavaScript, as arrays aceitam qualquer tipo de elemento - números, strings, conjuntos chave-valor, etc. Dessa forma, a array deixa aquele formato mais simples que vimos no último tópico. 
+É importante destacar que, em JavaScript, as arrays aceitam qualquer tipo de elemento - números, strings, conjuntos chave-valor (objetos), etc. Dessa forma, a array deixa aquele formato mais simples que vimos no último tópico. 
 
 Veja um exemplo de array mais variada: 
 
@@ -129,16 +124,16 @@ novaArray[1] = "geleia"
 novaArray[2] = true
 ```
 
-1. Declaramos uma constante que é uma array vazia;
+1. Declaramos uma constante *novaArray*, que é uma array vazia;
 2. Adicionamos *banana* no índice 0;
 3. *geleia* no índice 1;
 4. *true* no índice 2.
 
+`// novaArray = ['banana', 'geleia', true]`
+
 ## Como editar uma array
 
-É possível apenas adicionar item numa array vazia, mas também numa array já existente e editar os elementos que já estão lá. 
-
-É só *atribuir valor àquele índice*:
+Além de adicionar item numa array vazia, é possível adicionar também numa array já existente ou editar os elementos que já estão lá. É só *atribuir valor àquele índice*. Exemplo:
 
 ```js
 const novaArray = ["banana", "geleia", true]
@@ -151,9 +146,17 @@ novaArray[20] = "recife"
 
 Ou seja: Se usar um índice que já está preenchido na array, ele será substituído. Se usar um que ainda não tem na array, ele será incluído.
 
-# Explorando os elementos de uma Array
+# Arrays Parte 2 Explorando os Elementos da Array
 
-## Mostrando apenas um item da array
+## Conhecendo Quantos Elementos Tem na Array
+
+```js
+const papelaria = ['lápis', 'borracha', 'caneta']
+console.log(papelaria.length)
+// 3
+```
+
+## Mostrando Apenas um Elemento da Array
 
 Tenha a array e referencie seu índice. Será mostrado o que está guardado naquele índice.
 
@@ -164,14 +167,14 @@ console.log(papelaria[2])
 ```
 *"índice 2 de papelaria" ou "papelaria índice 2"*
 
-```
+```js
 const nome = "mariana"
 console.log(nome[95-93]) 
 // "r" 
 ```
-> Afinal *String é uma array de caracteres*!
+> Afinal **string é uma array de caracteres**!
 
-## Imprimindo os elementos da array em linhas separadas
+## Imprimindo os Elementos da Array em Linhas Separadas
 
 É possível imprimir na tela todos os itens da array em linhas separadas, índice por índice, com a ajuda do for:
 
@@ -188,11 +191,26 @@ console.log(nome[95-93])
     imprimeTarefas(tarefas)
 ```
 
+# Arrays Parte 3 Métodos de Array
 
-# Objetos
+Lembra que falamos lá no começo dos métodos? O que são os métodos? São formas de fazer coisas dentro de um array. Métodos sempre envolvem uma ação que vai mudar alguma coisa.
+
+Os métodos e suas descrições está nesta ![planilha ainda em construção](https://docs.google.com/spreadsheets/d/1owj6p3P4QZXCcPmqNtQq-XBv1TlA6b_lCGKKWMO6_TI/edit?usp=sharing) e os exemplos dos usos está neste repositório com os nomes *metodo-NOMEDOMÉTODO-exercicios.js*.
+
+Não se preocupe: métodos são coisas para se aprender à parte, dedicando vários dias e fazendo bastante exercício e merece um repositório só para eles, mas aqui vai um resuminho sobre os principais métodos e o que eles podem fazer por nós:
+
+- Para agregar ou retirar elementos: push, pop, shift, unshift, slice, splice e concat.
+- Para buscar elementos dentro da array: indexOf, lastIndexOf, includes, find, findIndex e filter.
+- Para transformar arrays: map, reduce, sort, reverse, split e join.
+
+Site com todos os métodos: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+
+# Objetos -  Em edição
 
 ## Estrutura Básica de Objeto
-Os objetos são, tenta lembrar assim, como grandes matrizes. Essa é a estrutura básica dos objetos:
+Os objetos são conjuntos de chave-valor. Exemplo:
+
 ```js
 const pessoa1 = {
     fname: 'Mariana', // conjunto chave-valor
@@ -283,79 +301,7 @@ Esse caso é melhor que o de cima, pois permite variáveis! Isso pode trazer mui
 console.log(`Uma das cidades que a ${pessoa1['fname']} esteve é ${pessoa1['cities'][2]}`)
 ```
 
-# Bagunça <h1>
-## Métodos de Array <h2>
-
-#### Para saber quantos elementos têm na Array <h4>
-```js
-const cpf = [072, 200, 684, 5, 0]
-console.log(cpf.length)
-//resultado no terminal: 5
-```
-
-### Introdução <h3>
-Há formas já preparadas para fazer algumas coisas nas arrays, como empurrar fatores para dentro, tirar fatores e imprimir em tela, e muitos outros. Usamos assim: **"nomeDaArray.metodo"**.
-
-Site com todos os métodos: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
-
-**Atenção aqui:**
-para agregar e retirar elementos: *push, pop, shift, unshift, slice, splice e concat.*
-para buscar elementos dentro da array: *indexOf, lastIndexOf, includes, find, findIndex e filter.*
-para transformar arrays: map, reduce, *sort, reverse, split e join.*
-
-Abaixo, quatro deles:
-### Para colocar ou retirar elementos de uma array<h3>
-#### Como empurrar coisas para uma array: arr.push(oQueEuQueroIncluir) <h4>
-Aqui é possível "empurrar" mais um participante para a array, sendo ele o último.
-```js
-const femaleRappers = ['Elliot', 'Hill', 'Minaj']
-console.log(femaleRappers) // terminal: ['Elliot', 'Hill', 'Minaj']
-
-femaleRappers.push('Thee Stalion')
-console.log(femaleRappers) // terminal: ['Elliot', 'Hill', 'Minaj', 'Thee Stalion']
-```
-Outra forma de fazer isso, como já foi visto, é apenas escrever femaleRappers[3]='Thee Stalion' e ela será incluída por último na array. Mas, para isso, seria necessário já saber o tamanho da array para incluir na última posição e não correr o risco de substituir quem já estava dentro.
-#### Como extrair o último item de uma array: arr.pop() <h4>
-Arranca o último item de uma array.
-```js
-const trueSingers = ['Knowles', 'Houston', 'Keys', 'Spears']
-console.log(trueSingers) // terminal: ['Knowles', 'Houston', 'Keys', 'Spears']
-console.log(`Retiramos a ${trueSingers.pop()} da lista de cantoras`)
-console.log(trueSingers) // terminal: ['Knowles', 'Houston', 'Keys']
-```
-### Para Buscar Elementos dentro de uma array <h3> 
- #### Filter <h4>
- Filter recebe booleano, mas acho que não é esse mesmo filter aqui. O filter ensinado em aula serve para criar uma nova array baseada num parâmetro.
-#### Como achar um elemento numa array (sabendo seu índice): arr.indexOf(oQueEstouProcurando) <h4>
-Retorna qual o índice do que estou procurando. Se não estiver na array, aparece -1.
-```js
-const coresPreferidas = ['lilas', 'azul', 'rosa', 'branco']
-console.log(coresPreferidas.indexOf(azul)) // terminal: 1
-console.log(coresPreferidas.indexOf(branco)) // terminal: 3
-console.log(coresPreferidas.indexOf(verde)) // terminal: -1
-```
-### Para Transformar arrays <h3>
-#### Como dividir uma palavra ou número (uma array) e transformar em várias arrays: arr.split() <h4>
-```js
-const divideString = (entrada) => {
-    let arrayString = entrada.split('')
-    return arrayString
-}
-```
-#### Como inverter a ordem dos itens de uma array: arr.reverse() <h4>
-```js
-const inverteString = (precisaSerEmFormatoStringComColchetes) => {
-    let arrayInvertida = precisaSerEmFormatoStringComColchetes.reverse()
-    console.log(arrayInvertida)
-}
-
-inverteString([2, 3, 4, 5]) // terminal: [5, 4, 3, 2]
-```
-#### Map <h4>
-Map recebe uma estrutura de dados.
-
-
-
+: 
 
 
 

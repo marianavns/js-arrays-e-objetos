@@ -31,7 +31,7 @@
 
 # Dando uma Espiada Como Cada Um Se Parece
 
-![Homem vindo do teto amarrado pela cintura espiando o notebook](https://i.imgur.com/foCucGB.gif)
+<img src=https://i.imgur.com/foCucGB.gif alt="Homem vindo do teto amarrado pela cintura espiando o notebook" width="300" height="270"> 
 
 ```js
 let array = [
@@ -82,7 +82,7 @@ Já os métodos sempre **fazem** alguma coisa. Seja colocar uma string em maiús
 
 # Arrays Parte 1 Introdução
 
-![ilustração de homem segurando uma lista do tamanho dele](https://i.imgur.com/2jGKnWW.gif)
+<img src=https://i.imgur.com/2jGKnWW.gif alt="ilustração de homem segurando uma lista do tamanho dele" width="330" height="300">
 
 Array é uma lista de **elementos**. Cada elemento possui o seu **índice**, que é a posição que ele ocupa na array. Veja o exemplo:
 

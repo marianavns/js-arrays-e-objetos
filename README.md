@@ -44,27 +44,26 @@ Antes de entrar na conversa sobre arrays e objetos, é necessário conhecer algu
 
 ## Propriedades
 
-> Guarde no coração: Todos os valores JS possuem propriedades, exceto *null* e *undefined*.
+> Guarde no coração: Todos os valores JS possuem propriedades, sejam strings, números, arrays, objetos... exceto *null* e *undefined*.
 
-As propriedades são as características de algum valor. </br>
+As propriedades são as características de algum valor.
 
 Por exemplo, quando escrevemos: 
+
 ```js
 let computador = "computador"
 console.log(computador.length)
 ```
+ou
+`console.log(computador['length'])`
 estamos querendo saber qual o tamanho da string *"computador"*, que foi guardada na variável `computador`. O retorno no console, então, será `10`.
 
-Ou seja: </br>
-computador *.length* </br>
-\\\\\\\\\\  propriedade do **tipo primitivo string computador** </br>
-math *.max* </br>
-\\\\\\ propriedade do **objeto math**. *Esse conjunto forma uma função.*</br>
+Ou seja: 
+- computador *.length*: propriedade do tipo primitivo string "computador".
 
-Outra forma de acessar propriedades é usando colchetes:
-```js
-computador['length']
-```
+## Métodos
+
+Já os métodos sempre **fazem** alguma coisa. Seja colocar uma string em maiúsculo, retirar o último item de uma lista (array) ou filtrar um conjunto de informações (objetos). Existe sempre uma ação envolvida.
 
 # Arrays
 
